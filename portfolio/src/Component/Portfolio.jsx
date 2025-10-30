@@ -204,7 +204,7 @@ const handleSubmit = async (e) => {
         { value: '95%', label: 'Code Maintainability' },
         { value: '88%', label: 'Performance Score' }
       ],
-      githubLink: "https://github.com/nageshpaturkar/gemini-git",
+      githubLink: "https://github.com/nageshpaturkar/gemini-git.git",
       features: [
         "Component-based React architecture",
         "Real-time cryptocurrency price display",
