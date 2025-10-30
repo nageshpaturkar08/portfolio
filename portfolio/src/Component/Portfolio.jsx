@@ -165,7 +165,7 @@ const handleSubmit = async (e) => {
         { value: '45%', label: 'Accuracy improvement' },
         { value: '30%', label: 'Staff efficiency gain' }
       ],
-      githubLink: "https://github.com/nageshpaturkar/student-enquiry-portal",
+      githubLink: "https://github.com/nageshpaturkar/Citizen-Welfare-Reports-Generator",
       features: [
         "Spring Mail OTP verification",
         "Advanced JPA queries",
@@ -184,7 +184,7 @@ const handleSubmit = async (e) => {
         { value: '90%', label: 'Feature Replication' },
         { value: '85%', label: 'User Experience' }
       ],
-      githubLink: "https://github.com/nageshpaturkar/amazon-clone",
+      githubLink: "https://github.com/nageshpaturkar/Amazon-Clone",
       features: [
         "Responsive navigation bar with dropdown menus",
         "Product grid layout with hover effects",
@@ -204,7 +204,7 @@ const handleSubmit = async (e) => {
         { value: '95%', label: 'Code Maintainability' },
         { value: '88%', label: 'Performance Score' }
       ],
-      githubLink: "https://github.com/nageshpaturkar/gemini-clone",
+      githubLink: "https://github.com/nageshpaturkar/Gemini",
       features: [
         "Component-based React architecture",
         "Real-time cryptocurrency price display",
