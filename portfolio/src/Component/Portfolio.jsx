@@ -487,54 +487,54 @@ const handleSubmit = async (e) => {
       </section>
 
       {/* Journey Section */}
-      <section id="journey" className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">My Journey</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              From engineering graduate to full stack developer, creating impactful solutions
-            </p>
-          </div>
+      <section id="journey" className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-4">My Journey</h2>
+      <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+        From engineering graduate to full stack developer, creating impactful solutions
+      </p>
+    </div>
 
-          {/* Vertical Timeline Container */}
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Vertical Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-500/30 transform -translate-x-1/2"></div>
+    {/* Mobile-Optimized Timeline */}
+    <div className="max-w-4xl mx-auto">
+      <div className="relative">
+        {/* Vertical Line - Hidden on mobile, visible on medium screens and up */}
+        <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-blue-500/30 transform -translate-x-1/2"></div>
+        
+        {timelineData.map((item, index) => (
+          <div key={index} className="relative flex flex-col md:flex-row items-start mb-8 last:mb-0 group">
+            {/* Year Circle - Fixed positioning for mobile */}
+            <div className="flex items-center mb-4 md:mb-0 md:absolute md:left-8 md:transform md:-translate-x-1/2 z-10">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 rounded-full flex items-center justify-center border-4 border-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="font-bold text-white text-sm md:text-base">{item.year}</span>
+              </div>
+            </div>
+            
+            {/* Content Card - Proper spacing for mobile */}
+            <div className="w-full md:ml-32 bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 group-hover:border-blue-600/50 transition-all duration-300">
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 group-hover:text-gray-900 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-base sm:text-lg font-medium">{item.company}</p>
+              </div>
               
-              {timelineData.map((item, index) => (
-                <div key={index} className="relative flex items-start mb-12 last:mb-0 group">
-                  {/* Year Circle */}
-                  <div className="absolute left-8 transform -translate-x-1/2 z-10">
-                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center border-4 border-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <span className="font-bold text-white">{item.year}</span>
-                    </div>
+              <div className="space-y-3">
+                {item.achievements.map((achievement, achievementIndex) => (
+                  <div key={achievementIndex} className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{achievement}</p>
                   </div>
-                  
-                  {/* Content Card */}
-                  <div className="ml-32 bg-white rounded-2xl p-8 shadow-lg border border-gray-200 group-hover:border-blue-600/50 transition-all duration-300 flex-1">
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-bold text-blue-600 mb-2 group-hover:text-gray-900 transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-lg font-medium">{item.company}</p>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      {item.achievements.map((achievement, achievementIndex) => (
-                        <div key={achievementIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                          <p className="text-gray-700 leading-relaxed">{achievement}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-white">
